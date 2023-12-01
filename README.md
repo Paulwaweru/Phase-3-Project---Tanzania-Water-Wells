@@ -149,7 +149,9 @@ I dropped some of the columns given their similarities in the columns
 - The baseline model 
 - Hyperparameter tuning using GridSearchCV indicated that the following were best parameters:
 
-  Testing Accuracy: 79.31%
+  Training Accuracy: 83.63%
+  
+  Validation accuracy: 79.48%
 
   Optimal Parameters: {'criterion': 'entropy', 'max_depth': None, 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100}
 
@@ -182,3 +184,12 @@ I dropped some of the columns given their similarities in the columns
 
 ![Alt text](image-10.png)
 
+## Conclusion
+The XG Boost was the best performing model followed closely by Random Forests. The Logistic Regression and Decision Trees models performed poorly.  
+
+The above analysis can help the Tanzanian givernment solve the water crisis. Most of the functional water pumps are powered by gravity and handpump, maybe because they require limited machinery. Moreover, most of the wells whose water is not paid for are non functional. However, most wells where the community pays for water are functional. Moreover, considerable number of wells whose source is shallow wells and river/lakes are non-functional, again, maybe because of the machinery needed. 
+
+The Random Forests and XGBoost had different feature importances. The Random Forests showed that longitude, latitude, construction_year, gps_height, and quantity_enough were the most important features. The XGBoost model showed that the water_type_other, quantity_seasonal, extraction_type_class_other, quantity_insufficient, and quantity_other were the most important features. However, water type, extraction type, and payment type were common in both models. Paying for the water provides incentives for maintaining the pumps. 
+
+## Reccommendations 
+Future modeling will involve improving the quality of data. I had to drop the installer feature because of too many spelling mistakes and inconsistencies in the entries. 
