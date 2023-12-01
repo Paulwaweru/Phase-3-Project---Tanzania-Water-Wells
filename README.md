@@ -146,3 +146,39 @@ I dropped some of the columns given their similarities in the columns
 ![Alt text](image-7.png)
 
 ### Random Forests 
+- The baseline model 
+- Hyperparameter tuning using GridSearchCV indicated that the following were best parameters:
+
+  Testing Accuracy: 79.31%
+
+  Optimal Parameters: {'criterion': 'entropy', 'max_depth': None, 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100}
+
+- longitude, latitude, construction_year, gps_height, and quantity_enough were the most important features 
+![Alt text](image-8.png)
+
+### XGBoost
+- The basaline model performed well given that the training accuracy was 85.14%, while the test accuracy was 79.68%. 
+- Again after applying the GridSearchCV, I obtained the following results
+
+  Grid Search found the following optimal parameters: 
+  
+  learning_rate: 0.2
+  
+  max_depth: 6
+  
+  min_child_weight: 1
+  
+  n_estimators: 100
+  
+  subsample: 0.5
+
+- The accuracy score for the training and test preduction was as follows. 
+
+  Training Accuracy: 83.63%
+  
+  Validation accuracy: 79.48%
+
+  The XGBoost significantly improved our model. The water_type_other, quantity_seasonal, extraction_type_class_other, quantity_insufficient, and quantity_other were the most important features.  
+
+![Alt text](image-10.png)
+
